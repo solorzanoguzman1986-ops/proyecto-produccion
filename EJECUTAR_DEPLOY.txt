@@ -1,0 +1,53 @@
+╔══════════════════════════════════════════════════════════════╗
+║     🚀 INSTRUCCIONES PARA EJECUTAR DEPLOY                   ║
+╚══════════════════════════════════════════════════════════════╝
+
+OPCIÓN 1: DEPLOY AUTOMATIZADO (Vercel CLI)
+
+1. Instalar Vercel CLI (si no está instalado):
+   npm i -g vercel
+
+2. Configurar variables de entorno:
+   ./scripts/configurar-variables-vercel.sh
+
+3. Ejecutar deploy:
+   ./scripts/deploy-vercel.sh
+
+4. Después de obtener la URL, configurar webhook de Stripe:
+   - Ve a: https://dashboard.stripe.com/webhooks
+   - URL: [TU_URL]/api/stripe/webhook
+   - Copia el webhook secret
+
+5. Actualizar STRIPE_WEBHOOK_SECRET:
+   echo "whsec_..." | vercel env add STRIPE_WEBHOOK_SECRET production
+
+6. Redeploy:
+   ./scripts/redeploy-final.sh
+
+7. Verificar:
+   ./scripts/verificar-produccion.sh
+
+═══════════════════════════════════════════════════════════════
+
+OPCIÓN 2: DEPLOY MANUAL (Vercel Dashboard)
+
+1. Ve a: https://vercel.com
+2. Login/Crear cuenta
+3. Add New Project → Import Git Repository
+4. Selecciona tu repositorio
+5. Configura variables (ver variables-vercel.txt)
+6. Deploy
+7. Copia URL de producción
+8. Actualiza NEXTAUTH_URL con la URL
+9. Configura webhook de Stripe
+10. Actualiza STRIPE_WEBHOOK_SECRET
+11. Redeploy
+
+═══════════════════════════════════════════════════════════════
+
+VER DOCUMENTACIÓN COMPLETA:
+- DEPLOY_AUTOMATIZADO.md
+- DEPLOY_VERCEL_DASHBOARD.md
+- REPORTE_DEPLOY_FINAL.md
+
+═══════════════════════════════════════════════════════════════

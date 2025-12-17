@@ -1,0 +1,76 @@
+
+> monetizacion-app@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+✅ Stripe configurado en modo LIVE (Pagos reales)
+✅ Stripe configurado en modo LIVE (Pagos reales)
+   Generating static pages (0/18) ...
+Error al obtener suscripción: n [Error]: Dynamic server usage: Route /api/subscription couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at l (/Users/imac/proyecto/.next/server/chunks/276.js:1:37218)
+    at d (/Users/imac/proyecto/.next/server/chunks/790.js:25:27870)
+    at s (/Users/imac/proyecto/.next/server/chunks/790.js:25:20859)
+    at l (/Users/imac/proyecto/.next/server/app/api/subscription/route.js:1:1256)
+    at /Users/imac/proyecto/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:38417
+    at /Users/imac/proyecto/node_modules/next/dist/server/lib/trace/tracer.js:140:36
+    at NoopContextManager.with (/Users/imac/proyecto/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/Users/imac/proyecto/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/Users/imac/proyecto/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/Users/imac/proyecto/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Route /api/subscription couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+   Generating static pages (4/18) 
+   Generating static pages (8/18) 
+Error al obtener pagos: n [Error]: Dynamic server usage: Route /api/payments couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at l (/Users/imac/proyecto/.next/server/chunks/276.js:1:37218)
+    at d (/Users/imac/proyecto/.next/server/chunks/790.js:25:27870)
+    at s (/Users/imac/proyecto/.next/server/chunks/790.js:25:20859)
+    at l (/Users/imac/proyecto/.next/server/app/api/payments/route.js:1:1256)
+    at /Users/imac/proyecto/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:38417
+    at /Users/imac/proyecto/node_modules/next/dist/server/lib/trace/tracer.js:140:36
+    at NoopContextManager.with (/Users/imac/proyecto/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/Users/imac/proyecto/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/Users/imac/proyecto/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/Users/imac/proyecto/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854) {
+  description: "Route /api/payments couldn't be rendered statically because it used `headers`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+   Generating static pages (13/18) 
+ ✓ Generating static pages (18/18)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    175 B          96.2 kB
+├ ○ /_not-found                          873 B          88.2 kB
+├ ƒ /api/auth/[...nextauth]              0 B                0 B
+├ ƒ /api/auth/register                   0 B                0 B
+├ ƒ /api/payments                        0 B                0 B
+├ ƒ /api/stripe/create-checkout          0 B                0 B
+├ ƒ /api/stripe/webhook                  0 B                0 B
+├ ƒ /api/subscription                    0 B                0 B
+├ ƒ /api/subscription/change             0 B                0 B
+├ ƒ /api/user/change-password            0 B                0 B
+├ ƒ /api/user/update                     0 B                0 B
+├ ○ /dashboard                           3.55 kB         109 kB
+├ ○ /dashboard/payments                  2.51 kB         108 kB
+├ ○ /dashboard/settings                  2.67 kB         108 kB
+├ ○ /dashboard/subscription              3.45 kB         109 kB
+├ ○ /login                               1.76 kB         107 kB
+└ ○ /register                            1.97 kB          98 kB
++ First Load JS shared by all            87.3 kB
+  ├ chunks/117-07cd2ade56352db2.js       31.7 kB
+  ├ chunks/fd9d1056-cf48984c1108c87a.js  53.6 kB
+  └ other shared chunks (total)          1.95 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

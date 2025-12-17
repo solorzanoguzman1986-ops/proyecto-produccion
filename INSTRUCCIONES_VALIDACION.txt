@@ -1,0 +1,56 @@
+╔══════════════════════════════════════════════════════════════╗
+║     🔍 INSTRUCCIONES PARA VALIDACIÓN EN PRODUCCIÓN          ║
+╚══════════════════════════════════════════════════════════════╝
+
+PASO 1: PROPORCIONAR URL DE PRODUCCIÓN
+
+Opción A - Guardar en archivo:
+  echo "https://tu-proyecto.vercel.app" > production_url.txt
+
+Opción B - Ejecutar con URL como parámetro:
+  ./scripts/validar-produccion-url.sh https://tu-proyecto.vercel.app
+
+═══════════════════════════════════════════════════════════════
+
+PASO 2: EJECUTAR VALIDACIÓN AUTOMÁTICA
+
+  ./scripts/validar-produccion-completo.sh
+
+Esto verificará:
+  ✅ Carga del frontend
+  ✅ Endpoints de API
+  ✅ Páginas principales
+  ✅ Webhook de Stripe
+
+═══════════════════════════════════════════════════════════════
+
+PASO 3: VALIDACIONES MANUALES
+
+1. REGISTRO DE USUARIO:
+   - Abre: [URL]/register
+   - Crea una cuenta
+   - Verifica en Supabase Dashboard
+
+2. LOGIN:
+   - Abre: [URL]/login
+   - Inicia sesión
+   - Verifica sesión persistente
+
+3. PAGO REAL:
+   - Ve al dashboard
+   - Selecciona un plan
+   - Completa pago con tarjeta real (LIVE)
+   - Verifica en Stripe Dashboard
+   - Verifica en Supabase Dashboard
+
+4. WEBHOOKS:
+   - Ve a Stripe Dashboard → Webhooks
+   - Verifica logs de eventos
+   - Verifica que no hay errores
+
+═══════════════════════════════════════════════════════════════
+
+VER REPORTE COMPLETO:
+  REPORTE_VALIDACION_PRODUCCION_FINAL.md
+
+═══════════════════════════════════════════════════════════════

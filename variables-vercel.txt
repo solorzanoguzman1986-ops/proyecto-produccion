@@ -1,0 +1,38 @@
+═══════════════════════════════════════════════════════════════
+VARIABLES DE ENTORNO PARA VERCEL
+═══════════════════════════════════════════════════════════════
+
+Copia estas variables desde .env.local y configúralas en Vercel:
+
+1. DATABASE_URL
+   (URL de conexión de Supabase)
+
+2. NEXTAUTH_URL
+   (Se actualizará después del deploy con la URL de producción)
+
+3. NEXTAUTH_SECRET
+   (Clave secreta de NextAuth)
+
+4. STRIPE_SECRET_KEY
+   (Clave secreta LIVE de Stripe - sk_live_...)
+
+5. NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+   (Clave pública LIVE de Stripe - pk_live_...)
+
+6. NEXT_PUBLIC_STRIPE_BASIC_PRICE_ID
+   (Price ID del plan básico - price_...)
+
+7. NEXT_PUBLIC_STRIPE_PREMIUM_PRICE_ID
+   (Price ID del plan premium - price_...)
+
+8. STRIPE_WEBHOOK_SECRET
+   (Se actualizará después de configurar webhook en Stripe)
+
+═══════════════════════════════════════════════════════════════
+
+⚠️  IMPORTANTE:
+- Marca todas como "Production"
+- Usa valores LIVE (no TEST) para Stripe
+- NEXTAUTH_URL y STRIPE_WEBHOOK_SECRET se actualizan después del deploy
+
+═══════════════════════════════════════════════════════════════
