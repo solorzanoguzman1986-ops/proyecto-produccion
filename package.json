@@ -5,9 +5,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
+    "postinstall": "prisma generate",
     "validate": "node scripts/validate-config.js",
     "test:payments": "node scripts/test-payments.js",
     "setup:production": "./scripts/setup-production.sh",
