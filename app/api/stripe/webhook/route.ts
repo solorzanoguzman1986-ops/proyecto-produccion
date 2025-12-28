@@ -1,3 +1,6 @@
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 import { NextResponse } from 'next/server'
 import { stripe, getPlanFromPriceId } from '@/lib/stripe'
 import { prisma } from '@/lib/prisma'
